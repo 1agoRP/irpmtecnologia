@@ -1,5 +1,5 @@
 /* =============================================================
-   DATACRON — APP.JS
+   IRPM TECNOLOGIA — APP.JS
    1. Navbar glassmorphic ao rolar
    2. Menu mobile (abre/fecha/links)
    3. Reveal on scroll
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cookieBanner = document.getElementById('cookie-banner');
     const cookieAccept = document.getElementById('cookie-accept');
     const cookieReject = document.getElementById('cookie-reject');
-    const COOKIE_KEY = 'datacron_cookie_consent';
+    const COOKIE_KEY = 'irpm_cookie_consent';
 
     function dismissCookieBanner(choice) {
         localStorage.setItem(COOKIE_KEY, choice);      // 'accepted' | 'rejected'
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 b.className = 'ps-badge';
             });
 
-            consoleEl.innerHTML = '<div class="log-line"><span class="t">[--:--:--]</span> <span class="msg" style="color:rgba(255,255,255,.3)">Sistema Datacron pronto. Aguardando disparo...</span></div>';
+            consoleEl.innerHTML = '<div class="log-line"><span class="t">[--:--:--]</span> <span class="msg" style="color:#55534C">Sistema IRPM pronto. Aguardando disparo...</span></div>';
 
             let delay = 400;
             steps.forEach(step => {
@@ -242,7 +242,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ── 7. FORMULÁRIO DE CONTATO com Loader + Fade-in ───── */
+    /* ── 7. FORMULARIO — entrega real via WhatsApp ────────
+       Sem backend: o formulario monta uma mensagem estruturada e abre a
+       conversa no WhatsApp ja preenchida. O lead nunca se perde no vazio.
+       Para trocar o numero, edite WHATSAPP abaixo. */
+    const WHATSAPP = '5511930050306';
     const contactForm = document.getElementById('contact-form');
     const formSuccess = document.getElementById('form-success');
 
@@ -250,36 +254,122 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
+            const val = (id) => (document.getElementById(id)?.value || '').trim();
+            const select = document.getElementById('servico-interesse');
+            const servico = select && select.selectedIndex > 0
+                ? select.options[select.selectedIndex].text
+                : 'Não informado';
+
+            const linhas = [
+                'Olá, Iago! Vim pelo site.',
+                '',
+                'Nome: ' + (val('form-nome') || '-'),
+                'WhatsApp: ' + (val('form-whatsapp') || '-'),
+                'Tipo de projeto: ' + servico,
+                '',
+                'O que eu preciso:',
+                val('form-descricao') || '(vou explicar por aqui)'
+            ];
+
             const submitBtn = contactForm.querySelector('[type="submit"]');
             const originalContent = submitBtn.innerHTML;
-
-            // Mostra spinner no botão
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `
-                <svg class="spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M21 12a9 9 0 11-6.219-8.56"/>
-                </svg>
-                Enviando...
-            `;
+            submitBtn.innerHTML = '<svg class="spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Abrindo WhatsApp...';
 
-            // Simula envio em 1.6s
+            const url = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(linhas.join(String.fromCharCode(10)));
+            window.open(url, '_blank', 'noopener');
+
             setTimeout(() => {
-                // Esconde formulário suavemente
-                contactForm.style.transition = 'opacity 0.4s ease';
+                contactForm.style.transition = 'opacity .4s ease';
                 contactForm.style.opacity = '0';
                 contactForm.style.pointerEvents = 'none';
-
                 setTimeout(() => {
                     contactForm.style.display = 'none';
-                    if (formSuccess) {
-                        formSuccess.classList.add('visible');
-                    }
-                    // Restaura botão para uso futuro (se o usuário inspecionar)
+                    if (formSuccess) formSuccess.classList.add('visible');
                     submitBtn.innerHTML = originalContent;
                     submitBtn.disabled = false;
                 }, 400);
-            }, 1600);
+            }, 500);
         });
+    }
+
+    /* ── 8. A ESTEIRA DO HERO ─────────────────────────────
+       Um log que roda de verdade: relogio local do visitante, linhas
+       carimbadas na hora e uma contagem regressiva ate o proximo ciclo.
+       Nao ha numero inventado aqui — so o mecanismo, funcionando. */
+    const rig = document.getElementById('rig');
+    if (rig) {
+        const logEl = document.getElementById('rig-log');
+        const clockEl = document.getElementById('rig-clock');
+        const countEl = document.getElementById('rig-count');
+        const calmo = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const dois = (n) => String(n).padStart(2, '0');
+        const agora = () => {
+            const d = new Date();
+            return dois(d.getHours()) + ':' + dois(d.getMinutes()) + ':' + dois(d.getSeconds());
+        };
+
+        const CICLO = [
+            ['lead recebido', 'formulário do site'],
+            ['whatsapp enviado', 'resposta automática'],
+            ['registro criado', 'planilha + CRM'],
+            ['proposta enviada', 'e-mail'],
+            ['ciclo concluído', 'sem intervenção manual']
+        ];
+
+        function imprime(msg, tag) {
+            const linha = document.createElement('div');
+            linha.className = 'rig-line';
+            linha.innerHTML = '<span class="rig-t"></span><span class="rig-m"></span><span class="rig-tag"></span>';
+            linha.children[0].textContent = agora();
+            linha.children[1].textContent = msg;
+            linha.children[2].textContent = tag;
+            logEl.appendChild(linha);
+            requestAnimationFrame(() => linha.classList.add('in'));
+            while (logEl.children.length > 6) logEl.removeChild(logEl.firstChild);
+            logEl.scrollTop = logEl.scrollHeight;
+        }
+
+        let passo = 0;
+        let restam = 0;
+
+        function ciclo() {
+            logEl.innerHTML = '';
+            passo = 0;
+            const proximo = () => {
+                if (passo >= CICLO.length) {
+                    restam = 300;
+                    return;
+                }
+                imprime(CICLO[passo][0], CICLO[passo][1]);
+                passo++;
+                setTimeout(proximo, calmo ? 900 : 620);
+            };
+            proximo();
+        }
+
+        setInterval(() => {
+            if (clockEl) clockEl.textContent = agora();
+            if (restam > 0) {
+                restam--;
+                if (countEl) countEl.textContent = dois(Math.floor(restam / 60)) + ':' + dois(restam % 60);
+                if (restam === 0) ciclo();
+            }
+        }, 1000);
+
+        if (clockEl) clockEl.textContent = agora();
+
+        // So comeca quando o painel estiver visivel — nada roda fora da tela.
+        const rigObs = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    rigObs.disconnect();
+                    setTimeout(ciclo, 500);
+                }
+            });
+        }, { threshold: 0.25 });
+        rigObs.observe(rig);
     }
 
 });

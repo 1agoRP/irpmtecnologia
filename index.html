@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datacron | Automações Inteligentes, Sites e Sistemas Sob Medida</title>
+    <title>IRPM Tecnologia | Automações Inteligentes, Sites e Sistemas Sob Medida</title>
     <meta name="description"
-        content="Desenvolvimento profissional de sites, landing pages de alta conversão e automações inteligentes. Eleve o nível tecnológico do seu negócio com a Datacron.">
+        content="Desenvolvimento profissional de sites, landing pages de alta conversão e automações inteligentes. Eleve o nível tecnológico do seu negócio com a IRPM Tecnologia.">
+    <meta name="theme-color" content="#E4E0D7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fontes pré-carregadas de forma não-bloqueante para otimizar FCP/LCP -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/webp" href="img/LogoOficial.webp">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
+    <link rel="stylesheet" href="styles.css?v=10">
+    <link rel="icon" href="img/favicon.ico?v=2" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=2">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png?v=2">
+    <link rel="apple-touch-icon" href="img/favicon-180.png?v=2">
 </head>
 
 <body>
@@ -23,20 +27,22 @@
     <div class="mobile-menu" id="mobile-menu">
         <button class="mobile-close" id="mobile-close">✕</button>
         <a href="#servicos" onclick="closeMobile()">Serviços</a>
+        <a href="#portfolio" onclick="closeMobile()">Portfólio</a>
         <a href="#simulador" onclick="closeMobile()">Simulador</a>
         <a href="#sobre" onclick="closeMobile()">Sobre</a>
         <a href="#contato" onclick="closeMobile()">Contato</a>
-        <a href="https://wa.me/5500000000000" class="btn-primary" style="font-size:16px;">Falar no WhatsApp</a>
+        <a href="https://wa.me/5511930050306" class="btn-primary" style="font-size:16px;">Falar no WhatsApp</a>
     </div>
 
     <!-- NAVBAR -->
     <header class="navbar" id="navbar">
         <div class="container nav-inner">
-            <a href="#" class="logo" aria-label="Datacron — Ir para o início">
-                <img src="img/LogoOficial.webp" alt="Datacron" width="41" height="40" fetchpriority="high" />
+            <a href="#" class="logo" aria-label="IRPM Tecnologia — Ir para o início">
+                <img src="img/logo-irpm.webp" alt="IRPM Tecnologia" width="82" height="42" fetchpriority="high" />
             </a>
             <ul class="nav-links">
                 <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
                 <li><a href="#simulador">Simulador</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -49,7 +55,7 @@
                         <line x1="3" y1="18" x2="21" y2="18" />
                     </svg>
                 </button>
-                <a href="https://wa.me/5500000000000" class="btn-nav">
+                <a href="https://wa.me/5511930050306" class="btn-nav">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2.5">
                         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
@@ -65,20 +71,8 @@
 
     <!-- HERO -->
     <section class="hero" id="home">
-        <div class="hero-bg">
-            <div class="dots-pattern"></div>
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-            <svg class="hex-grid" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="hex" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
-                        <polygon points="30,2 58,17 58,47 30,62 2,47 2,17" fill="none" stroke="#0d1b3e"
-                            stroke-width="0.8" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#hex)" />
-            </svg>
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-mark"></div>
         </div>
 
         <div class="container hero-grid">
@@ -88,17 +82,17 @@
                     Automação &amp; Sistemas Web
                 </div>
                 <h1 class="hero-title">
-                    Tecnologia que<br>
-                    <em>transforma negócios</em><br>
-                    em máquinas de resultado.
+                    Seu site atende<br>
+                    enquanto você <em>trabalha</em>.
                 </h1>
                 <p class="hero-sub">
-                    Sites profissionais, landing pages de altíssima conversão e automações inteligentes. Código sob
-                    medida por um programador web formado e especialista no mercado.
+                    Sites, landing pages e sistemas sob medida — com a automação que responde, registra e
+                    encaminha cada contato em segundos, sozinha. Código nativo, escrito por um programador
+                    web formado.
                 </p>
                 <div class="hero-cta">
                     <a href="#contato" class="btn-primary">
-                        Iniciar Projeto
+                        Pedir proposta
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.5">
                             <path d="M5 12h14M12 5l7 7-7 7" />
@@ -114,145 +108,55 @@
                                 stroke-width="3">
                                 <path d="M20 6L9 17l-5-5" />
                             </svg></div>
-                        Performance máxima
+                        Resposta automática no WhatsApp
                     </div>
                     <div class="check-item">
                         <div class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3">
                                 <path d="M20 6L9 17l-5-5" />
                             </svg></div>
-                        Código nativo &amp; limpo
+                        Código nativo, sem framework pesado
                     </div>
                     <div class="check-item">
                         <div class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3">
                                 <path d="M20 6L9 17l-5-5" />
                             </svg></div>
-                        SEO técnico otimizado
+                        Escopo e preço fechados antes de começar
                     </div>
                 </div>
             </div>
 
             <div class="hero-visual">
-                <div style="position:relative;">
-                    <div class="device-mockup">
-                        <div class="device-bar">
-                            <span class="d-dot r"></span>
-                            <span class="d-dot y"></span>
-                            <span class="d-dot g"></span>
-                            <div class="d-addr">datacron.com.br</div>
-                        </div>
-                        <div class="device-body">
-                            <div class="d-header-bar">
-                                <div class="d-brand">
-                                    <div class="d-brand-dot"></div>
-                                    DATACRON
-                                </div>
-                                <div class="d-nav-items">
-                                    <span class="d-nav-item">Serviços</span>
-                                    <span class="d-nav-item">Portfólio</span>
-                                    <span class="d-nav-item">Contato</span>
-                                </div>
-                            </div>
-                            <div class="d-hero-section">
-                                <div class="d-hero-tag">Automação Inteligente</div>
-                                <div class="d-hero-title">Resultados que<br><span>transformam</span></div>
-                                <div class="d-hero-sub">Sistemas sob medida para o seu negócio crescer de forma
-                                    escalável.</div>
-                                <div class="d-btn">Começar Agora →</div>
-                            </div>
-                            <div class="d-metrics">
-                                <div class="d-metric">
-                                    <div class="d-metric-val">50+</div>
-                                    <div class="d-metric-lbl">Projetos</div>
-                                </div>
-                                <div class="d-metric">
-                                    <div class="d-metric-val">100%</div>
-                                    <div class="d-metric-lbl">Custom</div>
-                                </div>
-                                <div class="d-metric">
-                                    <div class="d-metric-val">99</div>
-                                    <div class="d-metric-lbl">Score</div>
-                                </div>
-                            </div>
-                            <div class="d-cards">
-                                <div class="d-card">
-                                    <div class="d-card-icon c">
-                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00bcd4"
-                                            stroke-width="2.5">
-                                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                        </svg>
-                                    </div>
-                                    <div class="d-card-title">Automações</div>
-                                    <div class="d-card-sub">Flows inteligentes sem intervenção manual</div>
-                                </div>
-                                <div class="d-card">
-                                    <div class="d-card-icon g">
-                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00c97a"
-                                            stroke-width="2.5">
-                                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                                        </svg>
-                                    </div>
-                                    <div class="d-card-title">Analytics</div>
-                                    <div class="d-card-sub">Dados em tempo real para decisões</div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="rig" id="rig">
+                    <div class="rig-top">
+                        <span class="rig-live"><i aria-hidden="true"></i>em execução</span>
+                        <span class="rig-clock" id="rig-clock">--:--:--</span>
                     </div>
 
-                    <div class="float-chip chip-a">
-                        <div class="chip-ico cyan">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2">
-                                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="chip-txt-main">WhatsApp Automático</div>
-                            <div class="chip-txt-sub">100% sem intervenção</div>
-                        </div>
+                    <div class="rig-cron">
+                        <span class="rig-cron-exp">*/5 * * * *</span>
+                        <span class="rig-cron-job">esteira-leads</span>
                     </div>
 
-                    <div class="float-chip chip-b">
-                        <div class="chip-ico green">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#00c97a" stroke-width="2">
-                                <ellipse cx="12" cy="5" rx="9" ry="3" />
-                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="chip-txt-main">CRM Integrado</div>
-                            <div class="chip-txt-sub">Dados sincronizados</div>
-                        </div>
+                    <div class="rig-log" id="rig-log" role="log" aria-live="off" aria-label="Registro da esteira de automação">
+                        <div class="rig-line in"><span class="rig-t">--:--:--</span><span class="rig-m">aguardando primeiro ciclo</span></div>
+                    </div>
+
+                    <div class="rig-foot">
+                        <span class="rig-next">próxima execução em <b id="rig-count">--:--</b></span>
+                        <span class="rig-cursor" aria-hidden="true"></span>
                     </div>
                 </div>
+
+                <p class="rig-note">
+                    Demonstração ao vivo — a mesma esteira que instalo no seu negócio.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- TRUST STRIP -->
-    <section class="trust">
-        <div class="container">
-            <div class="trust-inner">
-                <div class="trust-item reveal">
-                    <div class="trust-num" data-target="50">0+</div>
-                    <div class="trust-lbl">Projetos Concluídos</div>
-                </div>
-                <div class="trust-item reveal">
-                    <div class="trust-num">100%</div>
-                    <div class="trust-lbl">Código Personalizado</div>
-                </div>
-                <div class="trust-item reveal">
-                    <div class="trust-num">10x</div>
-                    <div class="trust-lbl">Mais Produtividade</div>
-                </div>
-                <div class="trust-item reveal">
-                    <div class="trust-num">99</div>
-                    <div class="trust-lbl">Score de Performance</div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- SERVICES -->
     <section class="services" id="servicos">
@@ -400,14 +304,6 @@
                         </div>
                         <div class="card-visual">
                             <div class="score-wrap">
-                                <svg style="position:absolute;width:0;height:0">
-                                    <defs>
-                                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="0%" stop-color="#00bcd4" />
-                                            <stop offset="100%" stop-color="#00c97a" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
                                 <div class="score-ring">
                                     <svg width="90" height="90" viewBox="0 0 100 100">
                                         <circle class="ring-bg" cx="50" cy="50" r="45" />
@@ -468,38 +364,30 @@
                             </ul>
                         </div>
                         <div class="card-visual" style="align-items:stretch;">
-                            <div style="padding:20px;width:100%;display:flex;flex-direction:column;gap:10px;">
-                                <div
-                                    style="display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 16px;">
-                                    <div style="display:flex;align-items:center;gap:10px;">
-                                        <div
-                                            style="width:32px;height:32px;background:rgba(0,188,212,.1);border-radius:8px;display:grid;place-items:center;">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00bcd4"
-                                                stroke-width="2">
+                            <div class="conv-panel">
+                                <div class="conv-row">
+                                    <div class="conv-left">
+                                        <div class="conv-ico">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                                 <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
                                                 <circle cx="9" cy="7" r="4" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <div style="font-size:12px;font-weight:600;color:var(--navy)">Conversão
-                                            </div>
-                                            <div style="font-size:10px;color:var(--text-muted)">Visitantes → Leads</div>
+                                            <div class="conv-lbl">Conversão</div>
+                                            <div class="conv-sub">Visitantes → Leads</div>
                                         </div>
                                     </div>
-                                    <div
-                                        style="font-size:18px;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
-                                        +340%</div>
+                                    <div class="conv-big">+340%</div>
                                 </div>
-                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                                    <div
-                                        style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;">
-                                        <div style="font-size:16px;font-weight:800;color:var(--navy)">4.9s</div>
-                                        <div style="font-size:10px;color:var(--text-muted)">→ 0.8s LCP</div>
+                                <div class="conv-pair">
+                                    <div class="conv-cell">
+                                        <div class="conv-cell-val">0.8s</div>
+                                        <div class="conv-cell-lbl">LCP · era 4.9s</div>
                                     </div>
-                                    <div
-                                        style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;">
-                                        <div style="font-size:16px;font-weight:800;color:var(--green)">Top 3</div>
-                                        <div style="font-size:10px;color:var(--text-muted)">Google Orgânico</div>
+                                    <div class="conv-cell">
+                                        <div class="conv-cell-val">Top 3</div>
+                                        <div class="conv-cell-lbl">Google orgânico</div>
                                     </div>
                                 </div>
                             </div>
@@ -510,69 +398,240 @@
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="process" id="processo">
+
+    <!-- ══════════════════════════════════════════
+         PORTFOLIO
+
+         Para adicionar um projeto, use o MODELO comentado logo abaixo do
+         ultimo card e troque cinco coisas:
+
+           1. href e .pf-addr  → o dominio do site (os dois iguais)
+           2. .pf-shot         → descomente a linha <img> e aponte para o
+                                 arquivo em img/portfolio/. A imagem cobre o
+                                 marcador de vaga sozinha. Formato ideal:
+                                 1600x1000 (16:10), .webp, topo da home.
+           3. .pf-meta         → ano e tipo de trabalho
+           4. .pf-name / .pf-desc / .pf-result
+           5. .pf-stack        → um <span> por tecnologia
+
+         Para remover um projeto, apague o bloco <a> inteiro. A grade se
+         reorganiza sozinha — nao existe numero fixo de cards.
+
+         O ultimo card (.pf-next) e o convite; deixe-o sempre por ultimo.
+    ══════════════════════════════════════════ -->
+    <section class="portfolio" id="portfolio">
         <div class="container">
-            <div class="section-header reveal" style="text-align:center;max-width:560px;margin:0 auto 64px;">
-                <div class="section-tag">Como Funciona</div>
-                <h2 class="section-title">Do briefing ao <span>resultado</span></h2>
-                <p class="section-sub" style="margin:0 auto;">Processo claro, entregas pontuais e comunicação direta em
-                    todas as etapas.</p>
+            <div class="section-header reveal">
+                <div class="section-tag">Portfólio</div>
+                <h2 class="section-title">Projetos <span>no ar</span></h2>
+                <p class="section-sub">Uma seleção do que já entregamos — todos em produção, todos
+                    construídos sob medida.</p>
             </div>
 
-            <div class="process-steps">
-                <div class="p-step reveal">
-                    <div class="p-step-num">01</div>
-                    <div class="p-step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-                        </svg>
+            <div class="pf-grid">
+                <a class="pf-card reveal" href="https://foxapp.com.br/" target="_blank" rel="noopener">
+                    <div class="pf-thumb">
+                        <div class="pf-bar">
+                            <span class="pf-dot"></span>
+                            <span class="pf-dot"></span>
+                            <span class="pf-dot"></span>
+                            <span class="pf-addr">foxapp.com.br</span>
+                        </div>
+                        <div class="pf-shot">
+                            <img src="img/portfolio/foxapp.webp" alt="Página inicial do FOX, sistema de gestão automatizada de faturas" loading="lazy"
+                                width="1280" height="800">
+                        </div>
                     </div>
-                    <div class="p-step-title">Briefing &amp; Escopo</div>
-                    <p class="p-step-desc">Entendemos seus objetivos, público-alvo e necessidades técnicas em uma
-                        conversa detalhada.</p>
-                </div>
-                <div class="p-step reveal">
-                    <div class="p-step-num">02</div>
-                    <div class="p-step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>
+                    <div class="pf-info">
+                        <div class="pf-meta">2026 &middot; Sistema Web</div>
+                        <h3 class="pf-name">FOX</h3>
+                        <p class="pf-desc">Plataforma de recebimento, leitura e validação de faturas para operações condominiais e financeiras.</p>
+                        <div class="pf-result">Do documento à decisão, sem digitação manual</div>
+                        <div class="pf-stack">
+                            <span>Next.js</span>
+                            <span>FastAPI</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <span class="pf-go">Ver site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                            <path d="M7 17L17 7M7 7h10v10" />
+                        </svg></span>
                     </div>
-                    <div class="p-step-title">Planejamento</div>
-                    <p class="p-step-desc">Arquitetura técnica, wireframes e cronograma definidos antes de escrever uma
-                        linha de código.</p>
-                </div>
-                <div class="p-step reveal">
-                    <div class="p-step-num">03</div>
-                    <div class="p-step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <polyline points="16 18 22 12 16 6" />
-                            <polyline points="8 6 2 12 8 18" />
-                        </svg>
+                </a>
+
+                <a class="pf-card reveal" href="https://www.datacron.com.br/" target="_blank" rel="noopener">
+                    <div class="pf-thumb">
+                        <div class="pf-bar">
+                            <span class="pf-dot"></span>
+                            <span class="pf-dot"></span>
+                            <span class="pf-dot"></span>
+                            <span class="pf-addr">datacron.com.br</span>
+                        </div>
+                        <div class="pf-shot">
+                            <img src="img/portfolio/datacron.webp" alt="Página inicial do site Datacron" loading="lazy"
+                                width="1280" height="800">
+                        </div>
                     </div>
-                    <div class="p-step-title">Desenvolvimento</div>
-                    <p class="p-step-desc">Código limpo e performático com atualizações constantes e revisões
-                        colaborativas.</p>
-                </div>
-                <div class="p-step reveal">
-                    <div class="p-step-num">04</div>
-                    <div class="p-step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                            <polyline points="22 4 12 14.01 9 11.01" />
-                        </svg>
+                    <div class="pf-info">
+                        <div class="pf-meta">2026 &middot; Landing Page</div>
+                        <h3 class="pf-name">Datacron</h3>
+                        <p class="pf-desc">Página única para agência de automação, com simulador de pipeline ao vivo e conformidade LGPD.</p>
+                        <div class="pf-result">Zero framework, zero etapa de build</div>
+                        <div class="pf-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <span class="pf-go">Ver site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                            <path d="M7 17L17 7M7 7h10v10" />
+                        </svg></span>
                     </div>
-                    <div class="p-step-title">Entrega &amp; Suporte</div>
-                    <p class="p-step-desc">Deploy, testes finais e suporte pós-entrega para garantir tudo funcionando
-                        perfeitamente.</p>
-                </div>
+                </a>
+
+                <a class="pf-card reveal" href="https://purezenspa.com.br/" target="_blank" rel="noopener">
+                    <div class="pf-thumb">
+                        <div class="pf-bar">
+                            <span class="pf-dot"></span>
+                            <span class="pf-dot"></span>
+                            <span class="pf-dot"></span>
+                            <span class="pf-addr">purezenspa.com.br</span>
+                        </div>
+                        <div class="pf-shot">
+                            <img src="img/portfolio/purezen.webp" alt="Página inicial do site da Purezen Spa &amp; Estética" loading="lazy"
+                                width="1280" height="800">
+                        </div>
+                    </div>
+                    <div class="pf-info">
+                        <div class="pf-meta">2026 &middot; Landing Page</div>
+                        <h3 class="pf-name">Purezen Spa</h3>
+                        <p class="pf-desc">Página de captação para head spa e estética em Santana, com vitrine de rituais, pacotes e agendamento direto no WhatsApp.</p>
+                        <div class="pf-result">Do Google ao WhatsApp, sem formulário</div>
+                        <div class="pf-stack">
+                            <span>HTML</span>
+                            <span>Tailwind</span>
+                            <span>GSAP</span>
+                        </div>
+                        <span class="pf-go">Ver site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                            <path d="M7 17L17 7M7 7h10v10" />
+                        </svg></span>
+                    </div>
+                </a>
+
+                <!-- ─────────────────────────────────────────────
+                     MODELO — copie daqui até o </a>, cole acima desta linha
+                     e troque: dominio (href + .pf-addr), img src/alt,
+                     .pf-meta, .pf-name, .pf-desc, .pf-result e os .pf-stack.
+                     Enquanto nao houver <img>, o marcador de vaga aparece;
+                     ele some sozinho assim que a imagem entra.
+
+                <a class="pf-card reveal" href="https://exemplo.com.br" target="_blank" rel="noopener">
+                    <div class="pf-thumb">
+                        <div class="pf-bar">
+                            <span class="pf-dot"></span>
+                            <span class="pf-dot"></span>
+                            <span class="pf-dot"></span>
+                            <span class="pf-addr">exemplo.com.br</span>
+                        </div>
+                        <div class="pf-shot">
+                            <img src="img/portfolio/exemplo.webp" alt="Página inicial do site Exemplo" loading="lazy"
+                                width="1280" height="800">
+                            <div class="pf-skeleton" aria-hidden="true">
+                                <span class="sk-line tall w70"></span>
+                                <span class="sk-line w50"></span>
+                                <span class="sk-line w35"></span>
+                                <span class="sk-btn"></span>
+                                <div class="sk-row"><i></i><i></i><i></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pf-info">
+                        <div class="pf-meta">2026 &middot; Landing Page</div>
+                        <h3 class="pf-name">Nome do Projeto</h3>
+                        <p class="pf-desc">Uma linha sobre o que foi entregue e para quem.</p>
+                        <div class="pf-result">O resultado que importa</div>
+                        <div class="pf-stack">
+                            <span>Tecnologia</span>
+                        </div>
+                        <span class="pf-go">Ver site</span>
+                    </div>
+                </a>
+                ───────────────────────────────────────────── -->
+
+                <a class="pf-card pf-next reveal" href="#contato">
+                    <span class="pf-next-mark" aria-hidden="true"></span>
+                    <div class="pf-next-title">Seu projeto aqui</div>
+                    <p class="pf-next-desc">Conte o que você precisa e receba uma proposta em até 24h.</p>
+                    <span class="pf-go">Começar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                            <path d="M7 17L17 7M7 7h10v10" />
+                        </svg></span>
+                </a>
             </div>
         </div>
     </section>
 
+    <div class="fold" aria-hidden="true">
+        <span class="fold-mark">
+            <img src="img/icone.webp" alt="" width="44" height="44" loading="lazy">
+        </span>
+    </div>
+
+    <!-- COMO FUNCIONA — lido como agenda, nao como esteira numerada -->
+    <section class="process on-dark" id="processo">
+        <div class="container">
+            <div class="section-header reveal" style="max-width:640px;">
+                <div class="section-tag">Como Funciona</div>
+                <h2 class="section-title">Um projeto acaba.<br>Uma automação <span>não</span>.</h2>
+                <p class="section-sub">O que separa um site de um sistema é a frequência. Abaixo, o que
+                    acontece uma vez — e o que continua acontecendo depois que eu saio.</p>
+            </div>
+
+            <ol class="sched">
+                <li class="sched-row reveal">
+                    <span class="sched-when">@uma vez</span>
+                    <div class="sched-what">
+                        <h3 class="sched-title">Briefing e escopo</h3>
+                        <p class="sched-desc">Uma conversa para mapear o que trava o seu negócio hoje. Saio dela
+                            com escopo escrito e preço fechado.</p>
+                    </div>
+                </li>
+                <li class="sched-row reveal">
+                    <span class="sched-when">@uma vez</span>
+                    <div class="sched-what">
+                        <h3 class="sched-title">Arquitetura e telas</h3>
+                        <p class="sched-desc">Estrutura de dados, integrações e wireframes definidos antes da
+                            primeira linha de código. Você aprova o desenho, não o boleto.</p>
+                    </div>
+                </li>
+                <li class="sched-row reveal">
+                    <span class="sched-when">@toda semana</span>
+                    <div class="sched-what">
+                        <h3 class="sched-title">Build com link ao vivo</h3>
+                        <p class="sched-desc">Você recebe um endereço de teste no primeiro dia e acompanha o
+                            site crescer. Sem apresentação surpresa no final.</p>
+                    </div>
+                </li>
+                <li class="sched-row reveal">
+                    <span class="sched-when">@deploy</span>
+                    <div class="sched-what">
+                        <h3 class="sched-title">Publicação</h3>
+                        <p class="sched-desc">DNS, certificado, analytics e teste em aparelho real. Entrego o
+                            acesso de administrador no seu nome — o projeto é seu.</p>
+                    </div>
+                </li>
+                <li class="sched-row sched-row--forever reveal">
+                    <span class="sched-when">*/5 * * * *</span>
+                    <div class="sched-what">
+                        <h3 class="sched-title">A esteira roda</h3>
+                        <p class="sched-desc">Cada lead que entra é respondido, registrado e encaminhado a cada
+                            cinco minutos. De madrugada, no feriado, enquanto você atende outro cliente.
+                            É esta linha que você está comprando.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
     <!-- SIMULATOR -->
-    <section class="simulator" id="simulador">
+    <section class="simulator on-dark" id="simulador">
         <div class="container">
             <div class="section-header reveal">
                 <div class="section-tag">Automação ao Vivo</div>
@@ -584,7 +643,7 @@
             <div class="sim-card reveal">
                 <div class="sim-header">
                     <div class="sim-header-left">
-                        <div class="sim-header-title">Pipeline de Automação · Datacron</div>
+                        <div class="sim-header-title">Pipeline de Automação · IRPM</div>
                         <div class="sim-header-sub">Esteira de processamento de leads em tempo real</div>
                     </div>
                     <div class="sim-live">
@@ -668,11 +727,11 @@
                         <div class="console">
                             <div class="console-head">
                                 <div class="c-live"></div>
-                                datacron-pipeline · live output
+                                irpm-pipeline · live output
                             </div>
                             <div class="console-body" id="console">
                                 <div class="log-line"><span class="t">[--:--:--]</span> <span class="msg"
-                                        style="color:rgba(255,255,255,0.3)">Sistema Datacron pronto. Aguardando
+                                        style="color:#55534C">Sistema IRPM pronto. Aguardando
                                         disparo...</span></div>
                             </div>
                         </div>
@@ -682,75 +741,70 @@
         </div>
     </section>
 
+
+    <div class="fold fold--up" aria-hidden="true">
+        <span class="fold-mark">
+            <img src="img/icone.webp" alt="" width="44" height="44" loading="lazy">
+        </span>
+    </div>
+
     <!-- SOBRE -->
     <section class="sobre" id="sobre">
         <div class="container">
             <div class="sobre-grid">
                 <div class="sobre-visual reveal">
-                    <div class="sobre-card">
-                        <div class="sobre-card-content">
-                            <div class="sobre-avatar">DC</div>
-                            <div class="sobre-name">Datacron</div>
-                            <div class="sobre-role">Desenvolvimento Web &amp; Automações</div>
-                            <div class="sobre-bio">Especialistas em criar soluções digitais que realmente geram
-                                resultado — desde o primeiro clique até a conversão.</div>
-                            <div class="skill-bars">
-                                <div>
-                                    <div class="skill-row-top"><span class="skill-name">Desenvolvimento Web</span><span
-                                            class="skill-pct">98%</span></div>
-                                    <div class="skill-track">
-                                        <div class="skill-fill" style="width:98%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="skill-row-top"><span class="skill-name">Automações &amp;
-                                            Integrações</span><span class="skill-pct">95%</span></div>
-                                    <div class="skill-track">
-                                        <div class="skill-fill" style="width:95%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="skill-row-top"><span class="skill-name">Performance &amp;
-                                            SEO</span><span class="skill-pct">99%</span></div>
-                                    <div class="skill-track">
-                                        <div class="skill-fill" style="width:99%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sobre-stats">
-                                <div class="sobre-stat">
-                                    <div class="sobre-stat-val">50+</div>
-                                    <div class="sobre-stat-lbl">Projetos</div>
-                                </div>
-                                <div class="sobre-stat">
-                                    <div class="sobre-stat-val">100%</div>
-                                    <div class="sobre-stat-lbl">Satisfação</div>
-                                </div>
-                            </div>
+                    <figure class="card-id">
+                        <!-- As iniciais ficam atras da foto: se o arquivo sumir, elas reaparecem. -->
+                        <div class="card-id-photo" aria-hidden="true">
+                            <img src="img/iago.webp" alt="" width="92" height="92" loading="lazy">
+                            <span class="card-id-initials">IP</span>
                         </div>
-                    </div>
+                        <figcaption class="card-id-body">
+                            <div class="card-id-name">Iago R. Prado Man</div>
+                            <div class="card-id-role">Programador web · São Paulo, SP</div>
+                            <dl class="card-id-facts">
+                                <div>
+                                    <dt>Formação</dt>
+                                    <dd>Desenvolvimento web</dd>
+                                </div>
+                                <div>
+                                    <dt>Atende</dt>
+                                    <dd>Brasil inteiro, remoto</dd>
+                                </div>
+                                <div>
+                                    <dt>Resposta</dt>
+                                    <dd>Mesmo dia útil</dd>
+                                </div>
+                            </dl>
+                        </figcaption>
+                    </figure>
                 </div>
 
                 <div class="sobre-content reveal">
-                    <div class="section-tag">Sobre Nós</div>
-                    <h2 class="section-title">Mais que código —<br><span>parceiros de crescimento</span></h2>
-                    <p class="sobre-p">A <strong>Datacron</strong> nasceu da crença de que tecnologia bem feita
-                        transforma negócios. Não entregamos apenas sites ou automações — entregamos <strong>sistemas que
-                            funcionam enquanto você dorme</strong>.</p>
-                    <p class="sobre-p">Com domínio completo do stack moderno e profundo entendimento de negócios, cada
-                        projeto é pensado para gerar <strong>resultado mensurável</strong> — mais leads, mais
-                        conversões, mais eficiência operacional.</p>
-                    <p class="sobre-p">Nosso diferencial é a <strong>atenção obsessiva à qualidade</strong>: código
-                        limpo, performance máxima, SEO técnico e automações que realmente escalam.</p>
+                    <div class="section-tag">Sobre</div>
+                    <h2 class="section-title">Quem escreve<br>o <span>código</span></h2>
+                    <p class="sobre-p">Sou o Iago. A <strong>IRPM é a minha operação</strong> — não é
+                        um escritório com camadas de atendimento. Quem ouve o seu problema é quem
+                        desenha a solução, escreve o código e publica no ar.</p>
+                    <p class="sobre-p">Isso muda uma coisa prática: <strong>você fala direto com quem
+                        constrói</strong>. Um ajuste não vira chamado, vira mensagem. E ninguém repassa
+                        o seu projeto para um terceiro que você nunca viu.</p>
+                    <p class="sobre-p">Trabalho com código nativo sempre que ele resolve — os três
+                        projetos aqui em cima estão no ar, e você pode abrir o inspetor em qualquer um
+                        deles agora mesmo para ver o que tem por baixo.</p>
+
+                    <h3 class="stack-head">Com o que eu construo</h3>
                     <div class="sobre-tags">
-                        <span class="tag">HTML / CSS</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
                         <span class="tag">JavaScript</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Make / N8N</span>
-                        <span class="tag">WhatsApp API</span>
-                        <span class="tag">Google Ads</span>
-                        <span class="tag">SEO Técnico</span>
                         <span class="tag">Next.js</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">n8n</span>
+                        <span class="tag">Make</span>
+                        <span class="tag">WhatsApp API</span>
                         <span class="tag">WordPress</span>
                     </div>
                 </div>
@@ -764,14 +818,13 @@
             <div class="contato-grid">
                 <div class="reveal">
                     <div class="section-tag">Contato</div>
-                    <h2 class="contato-title">Vamos construir<br>algo incrível<br><span
-                            style="background:linear-gradient(135deg,var(--cyan),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">juntos?</span>
+                    <h2 class="contato-title">Vamos construir<br>algo incrível<br><span>juntos?</span>
                     </h2>
                     <p class="contato-sub">Descreva seu projeto e receba uma proposta personalizada. Resposta em até
                         24h.</p>
 
                     <div class="channel-cards">
-                        <a href="https://wa.me/5500000000000" class="channel-card">
+                        <a href="https://wa.me/5511930050306" class="channel-card">
                             <div class="ch-icon g">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path
@@ -783,25 +836,12 @@
                                 <div class="ch-val">+55 (11) 93005-0306</div>
                             </div>
                         </a>
-                        <a href="mailto:contato@datacron.com.br" class="channel-card">
-                            <div class="ch-icon c">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                    <polyline points="22,6 12,13 2,6" />
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="ch-label">E-mail</div>
-                                <div class="ch-val">contato@datacron.com.br</div>
-                            </div>
-                        </a>
                     </div>
                 </div>
 
                 <div class="reveal">
                     <div class="form-card">
-                        <div class="form-title">Solicitar Proposta</div>
+                        <div class="form-title">Pedir proposta</div>
                         <form id="contact-form">
                             <div class="form-2col">
                                 <div class="form-row">
@@ -814,11 +854,7 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <label class="form-label" for="form-email">E-mail</label>
-                                <input type="email" id="form-email" class="form-input" placeholder="seu@email.com" required>
-                            </div>
-                            <div class="form-row">
-                                <label class="form-label" for="servico-interesse">Serviço de Interesse</label>
+                                <label class="form-label" for="servico-interesse">Tipo de projeto</label>
                                 <select class="form-input" id="servico-interesse" name="servico">
                                     <option value="">Selecione uma opção</option>
                                     <option value="site-landing">Site / Landing Page</option>
@@ -829,12 +865,12 @@
                                 </select>
                             </div>
                             <div class="form-row">
-                                <label class="form-label" for="form-descricao">Descreva seu Projeto</label>
+                                <label class="form-label" for="form-descricao">O que você precisa</label>
                                 <textarea id="form-descricao" class="form-input"
                                     placeholder="Conte mais sobre o que você precisa..."></textarea>
                             </div>
                             <button type="submit" class="btn-submit">
-                                Enviar Solicitação
+                                Enviar pelo WhatsApp
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2.5">
                                     <line x1="22" y1="2" x2="11" y2="13" />
@@ -848,9 +884,11 @@
                                 <polyline points="22 4 12 14.01 9 11.01" />
                             </svg>
                             <div>
-                                <div style="font-weight:600;margin-bottom:2px;">Mensagem enviada!</div>
-                                <div style="font-size:12px;opacity:0.8;">Nossa equipe entrará em contato em breve pelo
-                                    WhatsApp.</div>
+                                <div style="font-weight:600;margin-bottom:2px;">WhatsApp aberto</div>
+                                <div style="font-size:12px;opacity:0.8;">Sua mensagem já está escrita — é só tocar em
+                                    enviar. Se a janela não abriu,
+                                    <a href="https://wa.me/5511930050306" style="text-decoration:underline;">abra a
+                                        conversa aqui</a>.</div>
                             </div>
                         </div>
                     </div>
@@ -861,28 +899,35 @@
 
     </main><!-- /main -->
 
+
+    <div class="fold" aria-hidden="true">
+        <span class="fold-mark">
+            <img src="img/icone.webp" alt="" width="44" height="44" loading="lazy">
+        </span>
+    </div>
+
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer on-dark">
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <img src="img/LogoOficial.webp" alt="Datacron" class="footer-logo" width="37" height="36" loading="lazy">
+                    <img src="img/logo-irpm-bone.webp" alt="IRPM Tecnologia" class="footer-logo" width="78" height="40" loading="lazy">
                     <p class="footer-tagline">Tecnologia, desenvolvimento web nativo e integrações inteligentes para
                         acelerar negócios.</p>
                     <div class="footer-socials">
-                        <a href="#" class="social-btn" aria-label="Instagram da Datacron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        <a href="#" class="social-btn" aria-label="Instagram da IRPM"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" width="15" height="15" aria-hidden="true">
                                 <rect x="2" y="2" width="20" height="20" rx="5" />
                                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                             </svg></a>
-                        <a href="#" class="social-btn" aria-label="LinkedIn da Datacron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        <a href="#" class="social-btn" aria-label="LinkedIn da IRPM"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" width="15" height="15" aria-hidden="true">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
                                 <rect x="2" y="9" width="4" height="12" />
                                 <circle cx="4" cy="4" r="2" />
                             </svg></a>
-                        <a href="#" class="social-btn" aria-label="GitHub da Datacron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        <a href="#" class="social-btn" aria-label="GitHub da IRPM"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" width="15" height="15" aria-hidden="true">
                                 <path
                                     d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
@@ -893,6 +938,7 @@
                     <div class="footer-col-title">Menu</div>
                     <div class="footer-links">
                         <a href="#servicos">Nossos Serviços</a>
+                        <a href="#portfolio">Portfólio</a>
                         <a href="#simulador">Simulador</a>
                         <a href="#sobre">Sobre Nós</a>
                         <a href="#contato">Fale Conosco</a>
@@ -909,7 +955,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Datacron — Todos os direitos reservados.</p>
+                <p>© 2026 IRPM — Todos os direitos reservados.</p>
                 <p>
                     <a href="#" onclick="openModal('modal-termos');return false;">Termos de Uso</a>
                     &bull;
@@ -946,21 +992,21 @@
             <div class="modal-body">
 
                 <div class="legal-highlight">
-                    Ao acessar e utilizar o site <strong>datacron.com.br</strong>, você concorda com os presentes Termos
+                    Ao acessar e utilizar o site <strong>irpm.com.br</strong>, você concorda com os presentes Termos
                     de Uso.
                     Caso não concorde com quaisquer disposições aqui previstas, recomendamos que não utilize este site.
                 </div>
 
                 <div class="legal-section">
                     <h2><span>01.</span> Identificação</h2>
-                    <p><strong>Datacron</strong> é uma empresa de tecnologia e desenvolvimento web sediada no Brasil,
+                    <p><strong>IRPM</strong> é uma empresa de tecnologia e desenvolvimento web sediada no Brasil,
                         prestadora de serviços em automação, criação de sites, sistemas e landing pages.</p>
-                    <p>Para contato: <strong>contato@datacron.com.br</strong></p>
+                    <p>Para contato: <strong>contato@irpm.com.br</strong></p>
                 </div>
 
                 <div class="legal-section">
                     <h2><span>02.</span> Objeto</h2>
-                    <p>O presente documento regula o uso do site <strong>datacron.com.br</strong>, incluindo todas as
+                    <p>O presente documento regula o uso do site <strong>irpm.com.br</strong>, incluindo todas as
                         páginas, funcionalidades, formulários e conteúdos disponibilizados, nos termos do <strong>Marco
                             Civil da Internet (Lei nº 12.965/2014)</strong> e demais legislações aplicáveis.</p>
                 </div>
@@ -982,7 +1028,7 @@
                 <div class="legal-section">
                     <h2><span>04.</span> Propriedade Intelectual</h2>
                     <p>Todo o conteúdo deste site — incluindo textos, imagens, logotipo, layout, código-fonte e marca
-                        <strong>Datacron</strong> — é de propriedade exclusiva da empresa e protegido pela <strong>Lei
+                        <strong>IRPM</strong> — é de propriedade exclusiva da empresa e protegido pela <strong>Lei
                             nº 9.610/1998 (Lei de Direitos Autorais)</strong> e pela <strong>Lei nº 9.279/1996 (Lei de
                             Propriedade Industrial)</strong>.
                     </p>
@@ -991,7 +1037,7 @@
 
                 <div class="legal-section">
                     <h2><span>05.</span> Responsabilidades</h2>
-                    <p>A Datacron empreende esforços para manter o site disponível e atualizado, mas <strong>não
+                    <p>A IRPM empreende esforços para manter o site disponível e atualizado, mas <strong>não
                             garante</strong>:</p>
                     <ul>
                         <li>Disponibilidade ininterrupta do serviço (força maior, manutenção, ataques);</li>
@@ -1005,7 +1051,7 @@
 
                 <div class="legal-section">
                     <h2><span>06.</span> Links Externos</h2>
-                    <p>Este site pode conter links para páginas de terceiros (ex.: WhatsApp, redes sociais). A Datacron
+                    <p>Este site pode conter links para páginas de terceiros (ex.: WhatsApp, redes sociais). A IRPM
                         não se responsabiliza pelo conteúdo, políticas de privacidade ou práticas de sites externos.</p>
                 </div>
 
@@ -1018,7 +1064,7 @@
                 <div class="legal-section">
                     <h2><span>08.</span> Legislação e Foro</h2>
                     <p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da
-                        comarca da sede da Datacron para dirimir quaisquer controvérsias, com renúncia expressa a
+                        comarca da sede da IRPM para dirimir quaisquer controvérsias, com renúncia expressa a
                         qualquer outro, por mais privilegiado que seja.</p>
                 </div>
 
@@ -1060,14 +1106,14 @@
             <div class="modal-body">
 
                 <div class="legal-highlight">
-                    A <strong>Datacron</strong> respeita e protege a privacidade dos seus usuários. Este documento
+                    A <strong>IRPM</strong> respeita e protege a privacidade dos seus usuários. Este documento
                     descreve como coletamos, usamos, armazenamos e protegemos seus dados pessoais, em conformidade com a
                     <strong>Lei Geral de Proteção de Dados — LGPD (Lei nº 13.709/2018)</strong>.
                 </div>
 
                 <div class="legal-section">
                     <h2><span>01.</span> Controlador dos Dados</h2>
-                    <p><strong>Datacron</strong> — contato@datacron.com.br — é a controladora responsável pelo
+                    <p><strong>IRPM</strong> — contato@irpm.com.br — é a controladora responsável pelo
                         tratamento dos dados pessoais coletados por meio deste site, nos termos do art. 5º, VI da LGPD.
                     </p>
                 </div>
@@ -1160,7 +1206,7 @@
                         </li>
                     </ul>
                     <p>Para exercer seus direitos, entre em contato pelo e-mail:
-                        <strong>privacidade@datacron.com.br</strong>. Respondemos em até <strong>15 dias úteis</strong>.
+                        <strong>privacidade@irpm.com.br</strong>. Respondemos em até <strong>15 dias úteis</strong>.
                     </p>
                 </div>
 
@@ -1175,8 +1221,8 @@
 
                 <div class="legal-section">
                     <h2><span>09.</span> Encarregado de Dados (DPO)</h2>
-                    <p>Nos termos do art. 41 da LGPD, o encarregado pelo tratamento de dados pessoais da Datacron pode
-                        ser contatado pelo e-mail: <strong>privacidade@datacron.com.br</strong>.</p>
+                    <p>Nos termos do art. 41 da LGPD, o encarregado pelo tratamento de dados pessoais da IRPM pode
+                        ser contatado pelo e-mail: <strong>privacidade@irpm.com.br</strong>.</p>
                 </div>
 
                 <div class="legal-section">
@@ -1204,7 +1250,7 @@
          BANNER DE CONSENTIMENTO DE COOKIES
     ══════════════════════════════════════════ -->
     <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Aviso de cookies">
-        <div class="cookie-icon">🍪</div>
+        <div class="cookie-icon" aria-hidden="true"></div>
         <div class="cookie-text">
             <strong>Utilizamos cookies</strong>
             <p>
@@ -1220,7 +1266,7 @@
         </div>
     </div>
 
-    <script src="app.js" defer></script>
+    <script src="app.js?v=4" defer></script>
 </body>
 
 </html>

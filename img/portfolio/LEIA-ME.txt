@@ -1,0 +1,2 @@
+# Screenshots dos projetos.
+# 1600x1000 (16:10), .webp, topo da home.

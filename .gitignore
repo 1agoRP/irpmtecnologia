@@ -7,3 +7,9 @@ assets/
 *.log
 .DS_Store
 Thumbs.db
+
+# Documento de cliente — nao publicar
+img/FOX_31.08.2026.pdf
+
+# Arte-fonte da marca antiga, ja substituida
+img/_source/
