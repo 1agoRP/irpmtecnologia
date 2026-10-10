@@ -1284,6 +1284,13 @@ a {
     gap: 20px;
 }
 
+/* Com um numero impar de cards o convite sobraria sozinho na ultima
+   linha, deixando um buraco ao lado. Nesse caso ele ocupa a linha
+   inteira e fecha a grade. Com numero par, nada muda. */
+.pf-grid>.pf-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
 .pf-card {
     position: relative;
     display: flex;
